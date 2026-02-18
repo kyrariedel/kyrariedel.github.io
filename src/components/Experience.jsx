@@ -64,7 +64,7 @@ export function Experience() {
       </div>
       <div className="resume-cta">
         <a
-          href="resume.pdf"
+          href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
