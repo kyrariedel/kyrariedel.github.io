@@ -1,0 +1,191 @@
+/* Set game — extends shared .game-modal styles from WordGame.css */
+
+.set-preview-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: min(320px, 85vw);
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+.set-preview-card {
+  cursor: default;
+  min-height: 64px;
+}
+
+.set-game-modal {
+  width: min(560px, 96vw);
+  max-height: min(92vh, 900px);
+  overflow-y: auto;
+}
+
+.set-hud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.set-timer {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.set-timer.urgent {
+  color: #e25b5b;
+  animation: set-pulse 1s ease-in-out infinite;
+}
+
+@keyframes set-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.set-score strong {
+  color: var(--text);
+}
+
+.set-color-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.set-color-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.set-color-picker input[type='color'] {
+  width: 2rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.set-board {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  margin: 0 auto 1rem;
+}
+
+.set-card {
+  aspect-ratio: 1.55 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.45rem;
+  background: linear-gradient(160deg, #f7f3ee 0%, #ebe4da 100%);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.set-card:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.set-card.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-dim), 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.set-card:disabled {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.set-card-svg {
+  width: 100%;
+  height: 100%;
+  max-height: 72px;
+  overflow: visible;
+}
+
+.set-game-over {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--accent-dim);
+}
+
+.set-game-over p {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.set-game-over .primary {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid var(--accent);
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.set-game-over .primary:hover {
+  filter: brightness(1.1);
+}
+
+.set-toast-success {
+  background: #2a9d5c;
+  color: #fff;
+}
+
+.set-toast-error {
+  background: #c94a4a;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .set-game-modal {
+    padding: 1rem;
+  }
+
+  .set-card {
+    padding: 0.25rem;
+    border-radius: 8px;
+  }
+
+  .set-card-svg {
+    max-height: 52px;
+  }
+
+  .set-hud {
+    font-size: 0.85rem;
+  }
+
+  .set-timer {
+    font-size: 1.15rem;
+  }
+}

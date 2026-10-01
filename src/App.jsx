@@ -2,7 +2,8 @@ import { Nav } from './components/Nav';
 import { About } from './components/About';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
-import { MiniProjects } from './components/MiniProjects';
+// Mini-Projects (Set + Squaredle) hidden from the published site.
+// import { MiniProjects } from './components/MiniProjects';
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
         <About />
         <Experience />
         <Projects />
-        <MiniProjects />
+        {/* <MiniProjects /> */}
       </main>
       <footer className="site-footer">
         Built with React and Vite, deployed with GitHub Pages. Layout inspired by: <a href="https://brittanychiang.com/" target="_blank" rel="noopener noreferrer">https://brittanychiang.com/</a>.

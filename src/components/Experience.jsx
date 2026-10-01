@@ -10,8 +10,8 @@ export function Experience() {
           <div className="timeline-desc">
             <ul>
               <li>
-                Designed a mobile dashboard interface with over 30 graphs and highlighted
-                data summaries, allowing all PMs to view metrics on-the-go
+              Built a mobile portfolio dashboard with 30+ interactive visualizations used by Portfolio Managers, 
+              handling pagination, rate limiting, and caching per-user and per-investment API calls, with lazy loading on scroll.
               </li>
             </ul>
           </div>
@@ -30,18 +30,12 @@ export function Experience() {
           <div className="timeline-desc">
             <ul>
               <li>
-                Implemented robust matrix denoising (PCA) in R to analyze genomic copy
-                number data, optimizing signal-to-noise ratio in genetic variation
-                detection
+              Optimized a PCA-based genomic denoising tool in R on 1000+ samples, then benchmarked it against 3 competing tools, 
+              identifying critical pipeline failures that informed a workflow redesign
               </li>
               <li>
-                Tested the algorithm against competitors using R and identified key issues
-                in the pipeline and design process
-              </li>
-              <li>
-                Produced data visualizations using ggplot2 to show algorithm performance
-                metrics compared to competing algorithms and presented the findings at
-                NY Genomics and Human Genetics Symposium, January 2024
+              Built performance visualizations in ggplot2 comparing algorithm accuracy metrics
+              and presented findings to 100+ researchers at the NY Genomics and Human Genetics Symposium (January 2024)
               </li>
             </ul>
           </div>

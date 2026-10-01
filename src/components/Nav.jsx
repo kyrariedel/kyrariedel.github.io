@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 
-const SECTIONS = ['about', 'experience', 'projects', 'mini-projects'];
+const SECTIONS = [
+  'about',
+  'experience',
+  'projects',
+  // 'mini-projects', // Set + Squaredle hidden from the published site
+];
 
 export function Nav() {
   const [active, setActive] = useState('about');

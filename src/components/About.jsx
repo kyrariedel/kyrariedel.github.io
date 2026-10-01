@@ -8,11 +8,10 @@ export function About() {
         </div>
         <div className="about-content">
           <p className="about-text">
-            I am a Masters computer science student at Northeastern University with an
-            interest in software development, data analysis, and computer vision. My
+            I am a recent MSCS graduatefrom Northeastern University with an
+            interest in software development and data analysis. My
             undergraduate degree was in Computer Science and Biology. I've worked in both data
-            analysis and software development roles, and I am looking for a full-time position in one of these areas
-            post-graduation. 
+            analysis and software development roles, and I am looking for a full-time position in one of these areas. 
           </p>
           <div className="about-links">
             <a
